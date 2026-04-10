@@ -428,15 +428,30 @@ ul {
 }
 
 @media (max-width: 900px) {
+  body {
+    background:
+      radial-gradient(circle at 15% 0%, rgba(207, 173, 103, 0.3), transparent 18rem),
+      radial-gradient(circle at 90% 8%, rgba(142, 210, 197, 0.34), transparent 18rem),
+      linear-gradient(160deg, #fbfdff 0%, #eef6f7 52%, #f7f0e1 100%);
+  }
+
   .nav {
     position: static;
     align-items: flex-start;
     flex-direction: column;
+    gap: 14px;
     border-radius: 28px;
   }
 
   .nav-links {
     flex-wrap: wrap;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    border: 1px solid rgba(31, 48, 70, 0.08);
+    background: rgba(255, 255, 255, 0.52);
   }
 
   .hero,
@@ -446,37 +461,250 @@ ul {
   }
 
   .hero {
-    padding-top: 38px;
+    gap: 16px;
+    padding-top: 28px;
   }
 
   .hero-card {
     min-height: auto;
+  }
+
+  .hero-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .metric {
+    min-height: 134px;
+  }
+
+  .content {
+    padding-top: 34px;
   }
 }
 
 @media (max-width: 560px) {
   .site-shell,
   .content {
-    width: min(100% - 22px, 1160px);
+    width: min(100% - 24px, 1160px);
   }
 
   .brand {
     align-items: flex-start;
+    gap: 9px;
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .brand::before {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+  }
+
+  .nav {
+    margin-top: 10px;
+    padding: 12px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
     padding: 7px 9px;
+    font-size: 0.9rem;
+  }
+
+  .nav-links a:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .hero {
+    padding: 20px 0 18px;
+  }
+
+  .hero-card,
+  .privacy-hero {
+    padding: 26px 22px 28px;
+  }
+
+  .hero-card::after,
+  .privacy-hero::after {
+    inset: auto -28% -30% 24%;
+    width: 260px;
+    height: 260px;
+  }
+
+  .eyebrow {
+    gap: 8px;
+    margin-bottom: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+  }
+
+  .eyebrow::before {
+    width: 24px;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 14vw, 3.8rem);
+    line-height: 1.02;
+  }
+
+  h2 {
+    font-size: clamp(1.45rem, 8vw, 2rem);
+    line-height: 1.14;
+  }
+
+  h3 {
+    font-size: 1.02rem;
+  }
+
+  .lead {
+    margin-top: 18px;
+    color: #59697d;
+    font-size: 1.03rem;
+    line-height: 1.75;
+  }
+
+  .button-row {
+    margin-top: 24px;
   }
 
   .button {
     width: 100%;
+    min-height: 50px;
+  }
+
+  .hero-notes,
+  .privacy-meta {
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .pill {
+    padding: 7px 10px;
+    font-size: 0.84rem;
+  }
+
+  .hero-side {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .metric {
+    min-height: 116px;
+    padding: 20px;
+  }
+
+  .metric strong {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .metric span {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .feature-grid {
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  .panel,
+  .notice {
+    padding: 22px;
+  }
+
+  .icon-card {
+    min-height: auto;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 16px;
+    border-radius: 15px;
+  }
+
+  .panel p,
+  .panel li,
+  .notice p,
+  .notice li {
+    color: #5d6c7f;
+    font-size: 0.98rem;
+    line-height: 1.78;
+  }
+
+  .faq-list {
+    gap: 10px;
+  }
+
+  .faq-item {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .notice {
+    margin-bottom: 34px;
+  }
+
+  .content {
+    padding: 22px 0 42px;
+  }
+
+  .privacy-grid {
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .policy-section {
+    margin-top: 12px;
+  }
+
+  ul {
+    padding-left: 1.05rem;
   }
 
   .hero-card,
   .panel,
   .notice,
   .privacy-hero {
-    border-radius: 26px;
+    border-radius: 24px;
+  }
+
+  .footer {
+    padding: 20px 0 30px;
+    font-size: 0.84rem;
+    line-height: 1.7;
   }
 }
 
+@media (max-width: 380px) {
+  .site-shell,
+  .content {
+    width: min(100% - 18px, 1160px);
+  }
+
+  .nav-links {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links a:last-child {
+    grid-column: auto;
+  }
+
+  .hero-side {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: clamp(2.08rem, 15vw, 3.25rem);
+  }
+}
