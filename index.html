@@ -21,12 +21,19 @@
     <main>
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-card">
-          <p class="eyebrow">Support</p>
-          <h1 id="page-title">支援與聯繫</h1>
-          <p class="lead">這裡是「我決定自己的未來-大學選系指南」的官方支援頁。你可以在這裡了解 App 的用途、資料範圍、常見問題，以及如何回報資料或使用問題。</p>
-          <div class="button-row">
-            <a class="button" href="mailto:victoriacheng1122@gmail.com">寄信給我們</a>
-            <a class="button secondary" href="privacy.html">查看隱私權政策</a>
+          <div class="hero-content">
+            <p class="eyebrow">Support Center</p>
+            <h1 id="page-title">把選系這件事，整理得更安靜、更清楚。</h1>
+            <p class="lead">這裡是「我決定自己的未來-大學選系指南」的官方支援頁。你可以查詢 App 用途、資料範圍、隱私說明，也可以直接回報資料或使用問題。</p>
+            <div class="button-row">
+              <a class="button" href="mailto:victoriacheng1122@gmail.com">寄信給我們</a>
+              <a class="button secondary" href="privacy.html">查看隱私權政策</a>
+            </div>
+            <div class="hero-notes" aria-label="服務摘要">
+              <span class="pill">本機個人化資料</span>
+              <span class="pill">無第三方追蹤 SDK</span>
+              <span class="pill">升學探索參考工具</span>
+            </div>
           </div>
         </div>
         <aside class="hero-side" aria-label="App 摘要">
@@ -35,16 +42,19 @@
         </aside>
       </section>
 
-      <section class="grid" aria-label="支援資訊">
-        <article class="panel">
+      <section class="feature-grid" aria-label="支援資訊">
+        <article class="panel icon-card">
+          <div class="icon">01</div>
           <h2>App 用途</h2>
           <p>本 App 協助台灣高中生、大一轉系生、gap year 使用者與家長探索大學、科系、學習內容、未來出路、高中準備方向、錄取資訊摘要與 rule-based 智慧推薦。</p>
         </article>
-        <article class="panel">
+        <article class="panel icon-card">
+          <div class="icon">02</div>
           <h2>資料說明</h2>
           <p>全台校系名錄以教育部統計處公開資料匯入；科系內容與錄取摘要屬於教育參考資訊。正式填志願前，仍請以各校與招生單位最新公告為準。</p>
         </article>
-        <article class="panel">
+        <article class="panel icon-card">
+          <div class="icon">03</div>
           <h2>聯繫信箱</h2>
           <p>若你發現資料錯誤、功能問題、介面異常或想提供建議，請來信：</p>
           <p><a href="mailto:victoriacheng1122@gmail.com">victoriacheng1122@gmail.com</a></p>
@@ -53,12 +63,20 @@
 
       <section class="notice" aria-labelledby="faq-title">
         <h2 id="faq-title">常見問題</h2>
-        <h3>推薦結果是真正的 AI 嗎？</h3>
-        <p>目前 MVP 使用 rule-based recommendation，會依照性格測驗、學科偏好、工作型態與產業偏好產生可解釋的推薦。若未來加入 AI 服務，會同步更新隱私權政策與 App Store 說明。</p>
-        <h3>如何刪除個人化資料？</h3>
-        <p>請到 App 內「關於」頁選擇「清除本機個人化資料」。這會刪除測驗結果、偏好、收藏、比較清單與最近瀏覽紀錄。</p>
-        <h3>錄取標準可以直接用來填志願嗎？</h3>
-        <p>不建議單獨依賴 App 內摘要填志願。正式填志願前，請務必查核大學招生委員會、各校招生網站與最新簡章。</p>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>推薦結果是真正的 AI 嗎？</h3>
+            <p>目前 MVP 使用 rule-based recommendation，會依照性格測驗、學科偏好、工作型態與產業偏好產生可解釋的推薦。若未來加入 AI 服務，會同步更新隱私權政策與 App Store 說明。</p>
+          </article>
+          <article class="faq-item">
+            <h3>如何刪除個人化資料？</h3>
+            <p>請到 App 內「關於」頁選擇「清除本機個人化資料」。這會刪除測驗結果、偏好、收藏、比較清單與最近瀏覽紀錄。</p>
+          </article>
+          <article class="faq-item">
+            <h3>錄取標準可以直接用來填志願嗎？</h3>
+            <p>不建議單獨依賴 App 內摘要填志願。正式填志願前，請務必查核大學招生委員會、各校招生網站與最新簡章。</p>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -68,4 +86,3 @@
   </div>
 </body>
 </html>
-
