@@ -160,12 +160,20 @@ main,
   color: var(--ink-soft);
   font-weight: 680;
   text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
 }
 
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
   background: rgba(31, 111, 141, 0.1);
   color: var(--blue-deep);
+}
+
+.nav-links a:hover {
+  transform: translateY(-1px);
 }
 
 .section {
@@ -463,6 +471,10 @@ h3 {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
+  transition:
+    box-shadow 160ms ease,
+    transform 160ms ease,
+    background-color 160ms ease;
 }
 
 .button.primary {
@@ -486,6 +498,14 @@ h3 {
 .button.tertiary {
   border: 1px solid transparent;
   color: var(--blue-deep);
+}
+
+.button:not(.is-disabled):hover {
+  transform: translateY(-1px);
+}
+
+.button:not(.is-disabled):active {
+  transform: translateY(0);
 }
 
 .hero-note {
@@ -520,10 +540,159 @@ h3 {
   backdrop-filter: none;
 }
 
+.journey {
+  display: grid;
+  grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+  gap: clamp(20px, 3vw, 34px);
+  align-items: start;
+  padding: clamp(22px, 3.6vw, 38px);
+}
+
+.journey-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.journey-steps article {
+  position: relative;
+  min-height: 118px;
+  padding: 18px 18px 18px 62px;
+  border: 1px solid rgba(21, 32, 51, 0.09);
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.54)),
+    rgba(255, 255, 255, 0.66);
+}
+
+.journey-steps article::before {
+  position: absolute;
+  top: 18px;
+  bottom: -13px;
+  left: 30px;
+  width: 1px;
+  content: "";
+  background: linear-gradient(to bottom, rgba(31, 111, 141, 0.26), transparent);
+}
+
+.journey-steps article:last-child::before {
+  display: none;
+}
+
+.journey-steps span {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(15, 70, 93, 0.96), rgba(31, 111, 141, 0.86));
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 850;
+  box-shadow: 0 10px 22px rgba(15, 70, 93, 0.22);
+}
+
+.journey-steps h3,
+.journey-steps p {
+  position: relative;
+}
+
+.journey-steps p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.68;
+}
+
+.feature-showcase {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.74fr) minmax(0, 1.26fr);
+  gap: clamp(20px, 3vw, 34px);
+  align-items: stretch;
+  padding: clamp(22px, 3.6vw, 38px);
+}
+
+.feature-copy {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-copy p:not(.eyebrow) {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 170px;
+  padding: 20px;
+  border: 1px solid rgba(21, 32, 51, 0.09);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 85% 14%, rgba(153, 216, 201, 0.22), transparent 8rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.55));
+}
+
+.feature-card.large {
+  grid-row: span 2;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 20% 8%, rgba(209, 173, 105, 0.24), transparent 9rem),
+    radial-gradient(circle at 100% 0%, rgba(31, 111, 141, 0.2), transparent 11rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.48));
+}
+
+.feature-card::after {
+  position: absolute;
+  right: -44px;
+  bottom: -54px;
+  width: 132px;
+  height: 132px;
+  content: "";
+  border-radius: 999px;
+  background: rgba(31, 111, 141, 0.07);
+}
+
+.feature-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(15, 70, 93, 0.08);
+  color: var(--blue-ink);
+  font-size: 1.15rem;
+  font-weight: 850;
+}
+
+.feature-card p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.68;
+}
+
 .card {
   position: relative;
   overflow: hidden;
   padding: 22px;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .card::after {
@@ -532,6 +701,14 @@ h3 {
   height: 1px;
   content: "";
   background: linear-gradient(90deg, transparent, rgba(209, 173, 105, 0.55), transparent);
+}
+
+.card:hover,
+.faq-item:hover,
+.feature-card:hover,
+.journey-steps article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 48px rgba(10, 35, 49, 0.11);
 }
 
 .card-label {
@@ -589,6 +766,42 @@ h3 {
   opacity: 0.84;
 }
 
+.reassurance {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(20px, 3vw, 34px);
+  align-items: start;
+  padding: clamp(22px, 3.6vw, 38px);
+}
+
+.reassurance-list {
+  display: grid;
+  gap: 12px;
+}
+
+.reassurance-list article {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid rgba(21, 32, 51, 0.09);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.reassurance-list strong {
+  color: var(--blue-ink);
+  font-size: 0.96rem;
+  font-weight: 830;
+}
+
+.reassurance-list span {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.64;
+}
+
 .faq {
   padding: clamp(22px, 3.4vw, 34px);
 }
@@ -613,6 +826,9 @@ h3 {
 
 .faq-item {
   padding: 18px;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .policy-main {
@@ -662,9 +878,30 @@ h3 {
 }
 
 .footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
   padding: 26px 0 42px;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.footer strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.footer p {
+  max-width: 660px;
+}
+
+.footer a {
+  flex: 0 0 auto;
+  font-weight: 720;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
@@ -700,6 +937,9 @@ h3 {
   }
 
   .hero,
+  .journey,
+  .feature-showcase,
+  .reassurance,
   .cards,
   .policy-grid,
   .info-band,
@@ -715,6 +955,20 @@ h3 {
 
   .contact-card .button {
     width: fit-content;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card.large {
+    grid-row: auto;
+    min-height: 190px;
+  }
+
+  .reassurance-list article {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }
 
@@ -794,6 +1048,10 @@ h3 {
     white-space: nowrap;
   }
 
+  .nav-links a:hover {
+    transform: none;
+  }
+
   .hero,
   .policy-hero {
     padding: 22px 17px;
@@ -856,6 +1114,9 @@ h3 {
   }
 
   .card,
+  .journey,
+  .feature-showcase,
+  .reassurance,
   .faq,
   .faq-item,
   .policy-section,
@@ -863,6 +1124,38 @@ h3 {
   .info-band,
   .hero-panel {
     padding: 16px;
+  }
+
+  .journey-steps article {
+    min-height: auto;
+    padding: 16px 16px 16px 58px;
+    border-radius: 18px;
+  }
+
+  .journey-steps article::before {
+    left: 29px;
+  }
+
+  .journey-steps span {
+    top: 16px;
+    left: 15px;
+  }
+
+  .feature-grid {
+    gap: 10px;
+  }
+
+  .feature-card {
+    min-height: auto;
+    padding: 17px;
+    border-radius: 18px;
+  }
+
+  .feature-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 14px;
+    border-radius: 14px;
   }
 
   .section {
@@ -945,6 +1238,10 @@ h3 {
   }
 
   .card p,
+  .journey-steps p,
+  .feature-card p,
+  .feature-copy p:not(.eyebrow),
+  .reassurance-list span,
   .faq-item p,
   .policy-section p,
   .contact-card p,
@@ -955,21 +1252,41 @@ h3 {
     line-height: 1.68;
   }
 
+  .reassurance-list article {
+    padding: 14px;
+    border-radius: 17px;
+  }
+
   .summary-pills span {
     width: 100%;
     justify-content: center;
   }
 
   .footer {
+    flex-direction: column;
+    gap: 10px;
     padding: 22px 0 calc(32px + env(safe-area-inset-bottom));
     font-size: 0.82rem;
     line-height: 1.55;
+  }
+
+  .footer a {
+    width: 100%;
+    overflow-wrap: anywhere;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 
   .app-icon-stage::after {
@@ -987,6 +1304,9 @@ h3 {
   .hero,
   .policy-hero,
   .card,
+  .journey,
+  .feature-showcase,
+  .reassurance,
   .faq,
   .faq-item,
   .policy-section,
