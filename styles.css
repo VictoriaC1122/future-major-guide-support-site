@@ -13,11 +13,11 @@
   --cream: #f7f0df;
   --shadow: 0 22px 70px rgba(30, 47, 71, 0.14);
   --shadow-soft: 0 12px 32px rgba(30, 47, 71, 0.09);
-  --radius-lg: 28px;
-  --radius-md: 20px;
-  --content: 1120px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --content: 1060px;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 * {
@@ -33,10 +33,11 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 8% 0%, rgba(209, 173, 105, 0.27), transparent 21rem),
-    radial-gradient(circle at 88% 4%, rgba(153, 216, 201, 0.34), transparent 24rem),
-    linear-gradient(145deg, #fbfcff 0%, #eef7f8 50%, var(--cream) 100%);
-  line-height: 1.72;
+    radial-gradient(circle at 8% 0%, rgba(209, 173, 105, 0.18), transparent 20rem),
+    radial-gradient(circle at 88% 4%, rgba(153, 216, 201, 0.24), transparent 23rem),
+    linear-gradient(145deg, #fbfcff 0%, #f3fafb 52%, #faf4e7 100%);
+  font-size: 1rem;
+  line-height: 1.68;
   text-rendering: optimizeLegibility;
 }
 
@@ -155,7 +156,7 @@ main,
 }
 
 .section {
-  margin-top: 22px;
+  margin-top: 18px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--paper);
@@ -168,12 +169,12 @@ main,
   grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
   gap: 18px;
   align-items: stretch;
-  margin-top: 44px;
-  padding: clamp(28px, 5vw, 58px);
+  margin-top: 34px;
+  padding: clamp(26px, 4.4vw, 46px);
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 660px;
 }
 
 .hero-panel,
@@ -190,7 +191,7 @@ main,
 }
 
 .hero-panel {
-  padding: 24px;
+  padding: 22px;
   align-self: stretch;
 }
 
@@ -219,26 +220,27 @@ h3 {
 }
 
 h1 {
-  max-width: 760px;
-  font-size: clamp(2.2rem, 5.8vw, 4.4rem);
-  font-weight: 840;
+  max-width: 640px;
+  font-size: clamp(2rem, 4.2vw, 3.35rem);
+  font-weight: 830;
 }
 
 h2 {
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-size: clamp(1.18rem, 1.65vw, 1.55rem);
   font-weight: 800;
 }
 
 h3 {
-  font-size: 1.08rem;
+  font-size: 1rem;
   font-weight: 780;
 }
 
 .lead {
-  max-width: 720px;
-  margin-top: 18px;
+  max-width: 640px;
+  margin-top: 14px;
   color: var(--muted);
-  font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+  font-size: clamp(1rem, 1.15vw, 1.08rem);
+  line-height: 1.72;
 }
 
 .action-row {
@@ -256,6 +258,7 @@ h3 {
   padding: 0 18px;
   border-radius: 999px;
   font-weight: 780;
+  font-size: 0.96rem;
   text-decoration: none;
 }
 
@@ -292,12 +295,12 @@ h3 {
 }
 
 .card {
-  padding: 24px;
+  padding: 22px;
 }
 
 .card-label {
   width: fit-content;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   padding: 4px 10px;
   border-radius: 999px;
   background: rgba(31, 111, 141, 0.1);
@@ -313,6 +316,8 @@ h3 {
 .info-band p,
 .hero-panel li {
   color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.72;
 }
 
 .card h2 + p,
@@ -329,11 +334,11 @@ h3 {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 24px;
   align-items: center;
-  padding: clamp(24px, 4vw, 38px);
+  padding: clamp(22px, 3.4vw, 34px);
 }
 
 .faq {
-  padding: clamp(24px, 4vw, 40px);
+  padding: clamp(22px, 3.4vw, 34px);
 }
 
 .section-heading {
@@ -344,20 +349,20 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .faq-item {
-  padding: 20px;
+  padding: 18px;
 }
 
 .policy-main {
-  max-width: 960px;
+  max-width: 880px;
 }
 
 .policy-hero {
-  margin-top: 44px;
-  padding: clamp(28px, 5vw, 52px);
+  margin-top: 34px;
+  padding: clamp(26px, 4.4vw, 44px);
 }
 
 .summary-pills {
@@ -385,7 +390,7 @@ h3 {
 }
 
 .policy-section {
-  padding: clamp(24px, 4vw, 34px);
+  padding: clamp(22px, 3.4vw, 32px);
 }
 
 .policy-section p + p {
@@ -405,7 +410,7 @@ h3 {
 
 @media (max-width: 900px) {
   :root {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .site-header,
@@ -452,13 +457,13 @@ h3 {
 
 @media (max-width: 560px) {
   :root {
-    font-size: 16px;
-    --radius-lg: 22px;
-    --radius-md: 18px;
+    font-size: 15.5px;
+    --radius-lg: 20px;
+    --radius-md: 16px;
   }
 
   body {
-    line-height: 1.68;
+    line-height: 1.66;
   }
 
   .site-header,
@@ -473,7 +478,7 @@ h3 {
 
   .brand {
     align-items: flex-start;
-    font-size: 0.94rem;
+    font-size: 0.9rem;
   }
 
   .brand-mark {
@@ -504,20 +509,21 @@ h3 {
 
   .hero,
   .policy-hero {
-    padding: 24px 20px;
+    padding: 22px 18px;
   }
 
   h1 {
-    font-size: clamp(2rem, 11vw, 3rem);
+    font-size: clamp(1.7rem, 8vw, 2.22rem);
+    line-height: 1.18;
   }
 
   h2 {
-    font-size: 1.45rem;
+    font-size: 1.18rem;
   }
 
   .lead {
-    margin-top: 14px;
-    font-size: 1rem;
+    margin-top: 12px;
+    font-size: 0.98rem;
   }
 
   .action-row {
@@ -537,7 +543,7 @@ h3 {
   .contact-card,
   .info-band,
   .hero-panel {
-    padding: 20px;
+    padding: 17px;
   }
 
   .section {
@@ -557,7 +563,7 @@ h3 {
 
   .footer {
     padding: 22px 0 32px;
-    font-size: 0.86rem;
+    font-size: 0.84rem;
   }
 }
 
