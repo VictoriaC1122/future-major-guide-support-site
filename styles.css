@@ -341,10 +341,29 @@ h3 {
   box-shadow: 0 14px 28px rgba(21, 32, 51, 0.2);
 }
 
+.button.primary.is-disabled {
+  cursor: default;
+  background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+  box-shadow: 0 14px 28px rgba(15, 70, 93, 0.2);
+}
+
 .button.secondary {
   border: 1px solid var(--line);
   background: var(--paper-strong);
   color: var(--blue-deep);
+}
+
+.button.tertiary {
+  border: 1px solid transparent;
+  color: var(--blue-deep);
+}
+
+.hero-note {
+  max-width: 620px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .check-list,
@@ -354,6 +373,10 @@ h3 {
   margin: 16px 0 0;
   padding-left: 1.2rem;
   color: var(--muted);
+}
+
+.trust-panel {
+  padding-top: 2px;
 }
 
 .cards,
@@ -572,6 +595,13 @@ h3 {
     font-size: 0.86rem;
   }
 
+  .brand span {
+    max-width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .brand-icon {
     width: 30px;
     height: 30px;
@@ -698,7 +728,7 @@ h3 {
   .app-icon-stage::after {
     inset: -8px;
     border-radius: 30px;
-    filter: blur(12px);
+    filter: blur(8px);
   }
 
   .app-icon-stage img {
@@ -740,6 +770,16 @@ h3 {
     padding: 22px 0 calc(32px + env(safe-area-inset-bottom));
     font-size: 0.82rem;
     line-height: 1.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .app-icon-stage::after {
+    filter: blur(6px);
   }
 }
 
